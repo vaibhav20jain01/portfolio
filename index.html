@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Jain — Product Manager</title>
+<meta name="description" content="Vaibhav Jain — Aspiring Product Manager. Case studies in fintech, hiring, D2C post-purchase experience, and marketplace product strategy, backed by primary research.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0D10'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='46' fill='%23E8A33D' text-anchor='middle'%3EVJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0D10;
+    --bg-raised: #15181D;
+    --bg-card: #1B1F25;
+    --ink: #F4F1EA;
+    --ink-soft: #A7ADB5;
+    --ink-faint: #6B7178;
+    --line: rgba(244,241,234,0.10);
+    --line-strong: rgba(244,241,234,0.18);
+    --accent: #E8A33D;
+    --accent-strong: #FFC65C;
+    --accent-ink: #1B1406;
+    --accent-soft: rgba(232,163,61,0.14);
+    --flag: #C1502E;
+    --radius: 4px;
+    --serif: 'IBM Plex Serif', Georgia, serif;
+    --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --max: 1080px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--accent); }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  ::selection{ background: var(--accent-soft); color: var(--accent-strong); }
+
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+  /* ---------- HIGHLIGHT / SIGNATURE ---------- */
+  .hl{
+    display: inline-block;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 1px 10px;
+    border-radius: 2px 13px 2px 13px;
+    transform: rotate(-1.1deg);
+    font-weight: 600;
+  }
+
+  /* ---------- NAV ---------- */
+  header.topbar{
+    position: sticky;
+    top: 14px;
+    z-index: 50;
+    padding: 0 16px;
+    margin-bottom: -6px;
+  }
+  .nav-inner{
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .pill{
+    background: rgba(21,24,29,0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 8px 10px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .pill-id{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .avatar{
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 13px;
+    display: flex; align-items:center; justify-content:center;
+    flex-shrink: 0;
+  }
+  .pill-name{ font-family: var(--sans); font-weight: 600; font-size: 14.5px; color: var(--ink); }
+  .menu-toggle{
+    background: none; border: 1px solid var(--line-strong); color: var(--ink);
+    width: 36px; height: 36px; border-radius: 50%;
+    font-size: 16px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  nav.pill-links{
+    display: none;
+    flex-direction: column;
+    background: var(--bg-raised);
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    margin-top: 8px;
+    padding: 6px;
+    gap: 2px;
+  }
+  nav.pill-links.open{ display: flex; }
+  nav.pill-links a{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+  nav.pill-links a:hover, nav.pill-links a.active{ color: var(--accent-strong); background: var(--accent-soft); }
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{ padding: 58px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type{ border-bottom: none; }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before{ content:""; width: 20px; height: 1px; background: var(--accent); display:inline-block; }
+  h2.section-title{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 34px);
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  p.lede{ font-size: 16px; color: var(--ink-soft); max-width: 62ch; margin: 0 0 34px; }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{ opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding: 54px 0 50px; border-bottom: 1px solid var(--line); }
+  h1.headline{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(38px, 9vw, 66px);
+    line-height: 1.08;
+    margin: 0 0 22px;
+    letter-spacing: -0.01em;
+  }
+  .sub{ font-family: var(--sans); font-size: 16.5px; color: var(--ink-soft); max-width: 58ch; margin: 0 0 28px; }
+  .cta-row{ display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+  .btn{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 14.5px;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .btn-solid{ background: var(--accent); color: var(--accent-ink); }
+  .btn-solid:hover{ background: var(--accent-strong); transform: translateY(-1px); }
+  .btn-outline{ background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
+  .btn-outline:hover{ border-color: var(--accent); color: var(--accent-strong); }
+
+  .proof-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .proof-cell{ background: var(--bg-raised); padding: 18px 16px; }
+  .proof-cell .num{ font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--accent-strong); display:block; }
+  .proof-cell .label{ font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); margin-top: 4px; display:block; }
+
+  /* ---------- TOOLS / SKILLS ---------- */
+  .tool-row{ display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+  .tool-badge{
+    width: 46px; height: 46px; border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+  }
+  .skill-grid{ display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .skill-card{
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .skill-card h3{ font-family: var(--serif); font-weight: 600; font-size: 19px; margin: 0 0 8px; }
+  .skill-card p{ font-size: 14.5px; color: var(--ink-soft); margin: 0 0 16px; }
+  .chip-row{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip{
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-soft); border: 1px solid var(--line-strong); padding: 5px 10px; border-radius: 999px;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp-card{
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+  .exp-when{ font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-bottom: 14px; }
+  .exp-card h3{ font-family: var(--serif); font-weight: 600; font-size: 20px; margin: 0 0 4px; }
+  .exp-role{ font-family: var(--sans); font-size: 13.5px; color: var(--accent-strong); font-weight: 600; margin: 0 0 14px; }
+  .exp-card ul{ margin: 0; padding-left: 18px; }
+  .exp-card li{ margin-bottom: 8px; color: var(--ink-soft); font-size: 15px; }
+  .exp-card li:last-child{ margin-bottom: 0; }
+  .exp-card strong{ color: var(--ink); font-weight: 600; }
+
+  /* ---------- CASE STUDIES ---------- */
+  .case-grid{ display: grid; grid-template-columns: 1fr; gap: 22px; }
+  .case{
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .case-cover{
+    height: 132px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 44px;
+    color: rgba(11,13,16,0.82);
+    letter-spacing: -0.02em;
+  }
+  .cover-nutrabay{ background: linear-gradient(135deg, #F4C56A, #C6862A); }
+  .cover-linkedin{ background: linear-gradient(135deg, #7FB7D8, #2E5E8C); color: rgba(244,241,234,0.9); }
+  .cover-rapipay{ background: linear-gradient(135deg, #6FC9AE, #17705A); color: rgba(244,241,234,0.9); }
+  .cover-scrapido{ background: linear-gradient(135deg, #A9C978, #4C6B2E); color: rgba(244,241,234,0.9); }
+  .case-body{ padding: 24px 24px 22px; }
+  .case-eyebrow{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+  .domain-tag{
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent-strong); background: var(--accent-soft); padding: 4px 9px; border-radius: 2px;
+  }
+  .status-tag{ font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); }
+  .case h3.case-title{ font-family: var(--serif); font-weight: 600; font-size: 21px; margin: 0 0 4px; }
+  .case .subtitle{ font-family: var(--sans); font-size: 13px; color: var(--ink-faint); margin: 0 0 15px; }
+  .problem{
+    font-family: var(--serif); font-style: italic; font-size: 15.5px; color: var(--ink);
+    border-left: 2px solid var(--accent); padding-left: 14px; margin: 0 0 16px; line-height: 1.5;
+  }
+  .case .tag-row{ margin-bottom: 16px; }
+  .case .tag{
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-soft); border: 1px solid var(--line-strong); padding: 4px 8px; border-radius: 2px;
+  }
+  .case ul.findings{ margin: 0 0 18px; padding-left: 18px; }
+  .case ul.findings li{ font-size: 14.5px; color: var(--ink-soft); margin-bottom: 8px; }
+  .case ul.findings li:last-child{ margin-bottom: 0; }
+  .case ul.findings strong{ color: var(--ink); font-weight: 600; }
+  .case-footer{
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    padding-top: 15px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11.5px;
+  }
+  .artifact-line{ color: var(--ink-faint); }
+  .artifact-line strong{ color: var(--ink-soft); font-weight: 600; }
+  .live-link{
+    text-decoration: none; color: var(--accent-strong); border: 1px solid var(--accent);
+    padding: 6px 12px; border-radius: 999px; transition: background 0.15s, color 0.15s;
+  }
+  .live-link:hover{ background: var(--accent); color: var(--accent-ink); }
+
+  /* ---------- LEADERSHIP ---------- */
+  .lead-entry{ background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .lead-entry .exp-when{ margin-bottom: 6px; }
+  .lead-entry h3{ font-family: var(--serif); font-weight: 600; font-size: 19px; margin: 0 0 2px; }
+  .lead-entry .exp-role{ margin-bottom: 12px; }
+  .lead-entry ul{ margin: 0; padding-left: 18px; }
+  .lead-entry li{ color: var(--ink-soft); font-size: 15px; margin-bottom: 7px; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-box{ display: flex; flex-direction: column; gap: 10px; }
+  .edu-box h3{ font-family: var(--serif); font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  .edu-box .edu-meta{ font-size: 14px; color: var(--ink-soft); }
+  .edu-box .edu-loc{ font-family: var(--mono); font-size: 12px; color: var(--ink-faint); }
+
+  /* ---------- FAQ ---------- */
+  .faq-item{ background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; }
+  .faq-q{
+    width: 100%; text-align: left; background: none; border: none; color: var(--ink);
+    font-family: var(--sans); font-weight: 600; font-size: 15.5px;
+    padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; gap: 12px;
+  }
+  .faq-q .icon{ font-family: var(--mono); color: var(--accent); flex-shrink: 0; }
+  .faq-a{ max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 20px; }
+  .faq-a p{ margin: 0 0 18px; color: var(--ink-soft); font-size: 14.5px; }
+  .faq-item.open .faq-a{ max-height: 240px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding: 50px 0 60px; }
+  footer h2{ font-family: var(--serif); font-weight: 600; font-size: clamp(26px,5vw,34px); margin: 0 0 10px; max-width: 14ch; }
+  footer p.foot-lede{ color: var(--ink-soft); max-width: 42ch; margin: 0 0 26px; }
+  .footer-links{ display: flex; flex-direction: column; gap: 10px; font-family: var(--mono); font-size: 13.5px; margin-bottom: 28px; }
+  .footer-links a{ color: var(--ink); text-decoration: none; }
+  .footer-links a:hover{ color: var(--accent-strong); }
+  .footer-bottom{
+    padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-faint); flex-wrap: wrap; gap: 8px;
+  }
+
+  /* ---------- DESKTOP ---------- */
+  @media (min-width: 720px){
+    .proof-grid{ grid-template-columns: repeat(4, 1fr); }
+    .skill-grid{ grid-template-columns: repeat(3, 1fr); }
+    .case-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1040px){
+    .wrap{ padding: 0 32px; }
+    header.topbar{ top: 20px; }
+    .pill{ padding: 8px 10px 8px 10px; }
+    .menu-toggle{ display: none; }
+    nav.pill-links{
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      gap: 4px;
+    }
+    nav.pill-links a{ padding: 8px 14px; }
+    .nav-inner{ flex-direction: row; align-items: center; justify-content: space-between; }
+    .pill{ flex: 0 0 auto; }
+  }
+  @media (max-width: 1039px){
+    .nav-inner .pill{ width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="nav-inner">
+    <div class="pill">
+      <a class="pill-id" href="#top">
+        <span class="avatar">VJ</span>
+        <span class="pill-name">Vaibhav Jain</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="pill-links" id="pillLinks">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+    <section class="hero" id="top">
+      <p class="eyebrow reveal">Product Manager — Portfolio</p>
+      <h1 class="headline reveal">Problem first.<br><span class="hl">Evidence</span> second.<br>Decision third.</h1>
+      <p class="sub reveal">
+        Aspiring Product Manager — four self-directed case studies in fintech, hiring, D2C post-purchase
+        experience, and marketplace trust, each backed by primary research and shipped as a PRD,
+        teardown, or working prototype.
+      </p>
+      <div class="cta-row reveal">
+        <a class="btn btn-solid" href="mailto:vasu2001jain@gmail.com">Email me</a>
+        <a class="btn btn-outline" href="Vaibhav_Jain_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+      </div>
+
+      <div class="proof-grid reveal">
+        <div class="proof-cell">
+          <span class="num">31</span>
+          <span class="label">Survey respondents, LinkedIn study</span>
+        </div>
+        <div class="proof-cell">
+          <span class="num">10Cr+</span>
+          <span class="label">Customers studied at RapiPay</span>
+        </div>
+        <div class="proof-cell">
+          <span class="num">1,070</span>
+          <span class="label">Reviews mined, Nutrabay study</span>
+        </div>
+        <div class="proof-cell">
+          <span class="num">4</span>
+          <span class="label">Product case studies shipped</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="skills">
+      <p class="eyebrow reveal">How I Build The Case</p>
+      <h2 class="section-title reveal">Method &amp; tools</h2>
+      <p class="lede reveal">Applied, not theoretical — the same toolkit shows up across every case study below.</p>
+
+      <div class="tool-row reveal">
+        <span class="tool-badge">XL</span>
+        <span class="tool-badge">Sheets</span>
+        <span class="tool-badge">PPT</span>
+        <span class="tool-badge">Canva</span>
+        <span class="tool-badge">SQL</span>
+      </div>
+
+      <div class="skill-grid">
+        <div class="skill-card reveal">
+          <h3>Product Discovery</h3>
+          <p>Framing the real problem before reaching for a fix.</p>
+          <div class="chip-row">
+            <span class="chip">User Research</span>
+            <span class="chip">Root Cause Analysis</span>
+            <span class="chip">Problem Framing</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Product Strategy</h3>
+          <p>Turning a validated problem into a sequenced plan.</p>
+          <div class="chip-row">
+            <span class="chip">Roadmapping</span>
+            <span class="chip">RICE Prioritization</span>
+            <span class="chip">PRDs</span>
+            <span class="chip">MVP Definition</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Business Analysis</h3>
+          <p>Grounding recommendations in how the business actually runs.</p>
+          <div class="chip-row">
+            <span class="chip">Market Research</span>
+            <span class="chip">Workflow Analysis</span>
+            <span class="chip">Stakeholder Analysis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="experience">
+      <p class="eyebrow reveal">Jan 2026 — Present</p>
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="exp-card reveal">
+        <div class="exp-when">Jan 2026 – Feb 2026 · Delhi, India</div>
+        <h3>RapiPay</h3>
+        <p class="exp-role">Product Management Intern · Assisted Banking &amp; Fintech Operations</p>
+        <ul>
+          <li>Mapped operations of a fintech platform serving <strong>10Cr+ customers via 6L+ agent outlets</strong>, studying 4 core banking services (AEPS, DMT, onboarding, settlement) in a regulated, RBI-licensed environment.</li>
+          <li>Benchmarked RapiPay against <strong>2 competing assisted-banking platforms</strong> (Spice Money, PayNearby) to identify differentiation gaps across product, positioning, and operations.</li>
+          <li>Partnered with business and operations teams to translate merchant-facing workflows into product requirements within a regulated fintech environment.</li>
+          <li>Synthesized internship learnings into a self-directed product teardown, translating operational observations into product recommendations, bug reports, and a feature PRD.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="work">
+      <p class="eyebrow reveal">Self-Directed</p>
+      <h2 class="section-title reveal">Case studies</h2>
+      <p class="lede reveal">
+        Four systems, four kinds of breakdown: a delivery experience that goes silent when something goes wrong,
+        a marketplace where trust is missing, a platform where status is invisible, and an informal economy
+        where price is unverifiable. Each follows the same discipline — root-cause the problem before proposing the fix.
+      </p>
+
+      <div class="case-grid">
+        <!-- CASE 1: Nutrabay -->
+        <article class="case reveal">
+          <div class="case-cover cover-nutrabay">N</div>
+          <div class="case-body">
+            <div class="case-eyebrow">
+              <span class="domain-tag">D2C · Post-Purchase</span>
+              <span class="status-tag">Case Study</span>
+            </div>
+            <h3 class="case-title">Nutrabay Post-Purchase Resolution</h3>
+            <p class="subtitle">Self-initiated — built for Nutrabay's PM internship application</p>
+            <p class="problem">"When delays are unavoidable, silence is what turns them into a trust problem."</p>
+            <div class="tag-row">
+              <span class="tag">10-Review Analysis</span>
+              <span class="tag">Root Cause Analysis</span>
+              <span class="tag">SLA/Exception Design</span>
+              <span class="tag">PRD</span>
+            </div>
+            <ul class="findings">
+              <li>Mined <strong>10 recurring 1-star themes</strong> across Play Store, App Store, Trustpilot &amp; MouthShut (<strong>2.24/5, 1,070 votes</strong>) to surface a "marked delivered, not received" gap Nutrabay's own help center calls "rare."</li>
+              <li>Root-caused it to a missing <strong>SLA/exception-aware layer</strong> on top of courier data Nutrabay already ingests, then designed a resolution flow reusing its existing Freshdesk and notification systems.</li>
+              <li>Modeled an illustrative <strong>~₹4L/month recovered GMV</strong> scenario and sequenced a 4-phase rollout by validation cost, not feature importance.</li>
+            </ul>
+            <div class="case-footer">
+              <span class="artifact-line">Artifact: <strong>15-Slide Deck</strong></span>
+              <a class="live-link" href="Nutrabay-Case-Study.pdf" target="_blank" rel="noopener">View PDF ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 2: LinkedIn -->
+        <article class="case reveal">
+          <div class="case-cover cover-linkedin">in</div>
+          <div class="case-body">
+            <div class="case-eyebrow">
+              <span class="domain-tag">Hiring · Marketplace</span>
+              <span class="status-tag">Case Study</span>
+            </div>
+            <h3 class="case-title">LinkedIn Application Intelligence</h3>
+            <p class="subtitle">Early-career hiring — reducing post-application uncertainty</p>
+            <p class="problem">"~75% of applicants never hear back — nobody had asked whether that silence was the actual problem worth solving."</p>
+            <div class="tag-row">
+              <span class="tag">N=31 Survey</span>
+              <span class="tag">Root Cause Analysis</span>
+              <span class="tag">RICE Prioritization</span>
+              <span class="tag">PRD</span>
+            </div>
+            <ul class="findings">
+              <li>Ran primary research (N=31) plus competitive and secondary research to identify <strong>application-status visibility</strong> as the single largest opportunity — validated as the top pick (48%) over four other options.</li>
+              <li>Designed a strategy to lift <strong>Recruiter Acceptance Rate by 10%</strong> through three RICE-prioritized pillars.</li>
+              <li>Authored a full PRD covering MVP scope, experimentation, and risks — including NYC Local Law 144 and EU AI Act constraints.</li>
+            </ul>
+            <div class="case-footer">
+              <span class="artifact-line">Artifact: <strong>Product Requirements Document</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 3: RapiPay Teardown -->
+        <article class="case reveal">
+          <div class="case-cover cover-rapipay">RP</div>
+          <div class="case-body">
+            <div class="case-eyebrow">
+              <span class="domain-tag">FinTech · Assisted Banking</span>
+              <span class="status-tag">Teardown</span>
+            </div>
+            <h3 class="case-title">RapiPay Product Teardown</h3>
+            <p class="subtitle">Independent teardown built on internship domain knowledge</p>
+            <p class="problem">"A reliability bug hiding in plain sight in public app reviews — and a revenue-per-visit gap nobody had written up."</p>
+            <div class="tag-row">
+              <span class="tag">Workflow Analysis</span>
+              <span class="tag">Competitive Benchmarking</span>
+              <span class="tag">Bug Report</span>
+            </div>
+            <ul class="findings">
+              <li>Mapped RapiPay's two-layer business model (<strong>6L+ agent outlets, 3Cr+ monthly transactions, ₹360Cr FY25 revenue</strong>) end-to-end.</li>
+              <li>Diagnosed a high-impact reliability bug from public review analysis — the AEPS screen freezes after completion — with a proposed stateless reset fix.</li>
+              <li>Proposed an insurance add-on at checkout with <strong>insurance attach rate</strong> as the success metric, sequenced across a 3-stage roadmap.</li>
+            </ul>
+            <div class="case-footer">
+              <span class="artifact-line">Artifact: <strong>Teardown, Bug Report &amp; Feature PRD</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 4: Scrapido -->
+        <article class="case reveal">
+          <div class="case-cover cover-scrapido">SC</div>
+          <div class="case-body">
+            <div class="case-eyebrow">
+              <span class="domain-tag">Sustainability · Marketplace</span>
+              <span class="status-tag">Hackathon Build</span>
+            </div>
+            <h3 class="case-title">Scrapido</h3>
+            <p class="subtitle">Sustain-a-thon 2025 — a three-sided marketplace for the informal recycling economy</p>
+            <p class="problem">"Scrap isn't just waste — it's lost income for collectors and lost material for artisans, and the reason is nobody trusts the price."</p>
+            <div class="tag-row">
+              <span class="tag">5-Member Team</span>
+              <span class="tag">AI Valuation</span>
+              <span class="tag">Live Prototype</span>
+            </div>
+            <ul class="findings">
+              <li>Led product strategy for a 5-member team during a national sustainability hackathon, delivering a live marketplace prototype connecting households, collectors, and artisans.</li>
+              <li>Framed pricing opacity as the core market failure, designing an AI-powered scrap valuation flow to close the trust gap.</li>
+              <li>Defined user journeys and feature prioritization across all three sides of the marketplace.</li>
+            </ul>
+            <div class="case-footer">
+              <span class="artifact-line">Artifact: <strong>Live Prototype</strong></span>
+              <a class="live-link" href="https://github.com/vaibhav20jain01/Scrapido" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="leadership">
+      <p class="eyebrow reveal">Ongoing</p>
+      <h2 class="section-title reveal">Leadership</h2>
+      <div class="lead-entry reveal">
+        <div class="exp-when">Sports Society</div>
+        <h3>Head of Operations</h3>
+        <p class="exp-role">College Sports Society</p>
+        <ul>
+          <li>Coordinated planning and execution of college sports events, managing logistics, stakeholder communication, and cross-functional teams.</li>
+          <li>Led operational planning across multiple events while improving execution, coordination, and team collaboration.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="education-section">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="edu-box reveal">
+        <h3>Vivekananda Institute of Professional Studies, GGSIPU</h3>
+        <p class="edu-meta">Bachelor of Technology, Computer Science Engineering (CSE) · CGPA 8.2/10</p>
+        <div class="edu-loc">Delhi, India · Expected Graduation: 2027</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="faq">
+      <p class="eyebrow reveal">Before You Reach Out</p>
+      <h2 class="section-title reveal">Questions I get asked</h2>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">What kind of PM roles are you looking for?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Product Management internships and early-career roles — ideally ones where I can own a problem end-to-end, from root cause to shipped fix.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How do you approach a new problem?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Root-cause it before proposing a fix. Every case study above follows the same order: evidence first, recommendation second, decision third.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I see how these were actually built?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes — the Nutrabay case study links to the full 15-slide deck, and Scrapido's code is on GitHub. Happy to walk through the thinking behind any of them.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <footer id="contact">
+      <h2 class="reveal">Let's talk product.</h2>
+      <p class="foot-lede reveal">Open to Product Management internships and early-career roles — happy to walk through the thinking behind any case study above.</p>
+      <div class="cta-row reveal" style="margin-bottom:28px;">
+        <a class="btn btn-solid" href="mailto:vasu2001jain@gmail.com">Email me</a>
+        <a class="btn btn-outline" href="tel:+917428221126">Call</a>
+      </div>
+      <div class="footer-links reveal">
+        <a href="https://www.linkedin.com/in/vaibhav-jain-65b392267" target="_blank" rel="noopener">linkedin.com/in/vaibhav-jain</a>
+        <a href="https://github.com/vaibhav20jain01" target="_blank" rel="noopener">github.com/vaibhav20jain01</a>
+      </div>
+      <div class="footer-bottom">
+        <span>Vaibhav Jain — Delhi, India</span>
+        <span>Built as a working document, not a brochure.</span>
+      </div>
+    </footer>
+  </div>
+
+</main>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const pillLinks = document.getElementById('pillLinks');
+  menuToggle.addEventListener('click', () => {
+    const open = pillLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  pillLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    pillLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.icon').textContent = '+'; });
+      if (!isOpen){ item.classList.add('open'); q.querySelector('.icon').textContent = '−'; }
+    });
+  });
+
+  // Scroll-reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Active nav link on scroll
+  const sections = ['work','experience','skills','faq','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  const navLinks = document.querySelectorAll('nav.pill-links a');
+  const setActive = () => {
+    let current = null;
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 140) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  };
+  document.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+
+</body>
+</html>
